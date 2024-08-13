@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { motion } from "framer-motion";
-import { exit } from "process";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 

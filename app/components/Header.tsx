@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <header className="border-b border-secondary p-4">
             <Section className="flex justify-between">
-                <h1 className="text-2xl text-primary font-bold">kamelchx.ca</h1>
+                <h1 className="text-2xl text-primary font-bold">kamelchx</h1>
                 <div className="flex items-center">
                     <ul className="flex items-center gap-2">
                         <Link href="https://github.com/kvmelxv" className="size-6 p-0">

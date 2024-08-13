@@ -94,12 +94,6 @@ const SIDE_PROJECTS: SideProjectsProps[] = [
         description: "A platform for checking weather forecasts and current conditions.",
         url:"/"
     },
-    {
-        logo: Zap,
-        title: "FlashLight",
-        description: "A platform for developres to share theirs projects.",
-        url:"/"
-    },
 ]
 
 type SideProjectsProps = {
@@ -175,14 +169,6 @@ const EDUCATION: EducationProps[] = [
         date: "Feb 2023 - July 2024",
         url: "/",
     },
-    {
-        image: "https://media.licdn.com/dms/image/C4D0BAQG9u_4mjmdGUg/company-logo_100_100/0/1630515439550/universite_laval_logo?e=1729728000&v=beta&t=gqY_cpO0u2hqU4wNXTjFZ0Y5YA2Pxv7JRmglqG9Lk5g",
-        title: "Laval University",
-        city: "Quebec, Canada",
-        curriculum : "Project management",
-        date: "Sept 2021 - may 2021",
-        url: "/",
-    },
     
 ]
 
@@ -197,7 +183,7 @@ type EducationProps = {
 
 const Education = (props: EducationProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded cursor-pointer">
+        <div className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 mt-4 rounded cursor-pointer">
             <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
             <div>
                 <p className="text-lg font-semibold">{props.title}</p>
