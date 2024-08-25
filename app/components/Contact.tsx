@@ -38,7 +38,7 @@ const CONTACT: ContactProps[] = [
     },
     {
         name: "Mustapha kamel cherif",
-        image: "https://media.licdn.com/dms/image/D4E03AQHJv3a8YtyG-g/profile-displayphoto-shrink_100_100/0/1714805850696?e=1727308800&v=beta&t=ObZ3XNxlKgF0fMVv3E0I3MwxI5ne_bY06SpMPSH13Ok",
+        image: "/me.png",
         mediumImage: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1729728000&v=beta&t=HfNEW1PaZMlCAQFpnT7dEELwx5TUX2XFsSwpoXhUmFQ",
         description:"Contact me via Linkedin.",
         url: "https://linkedin.com/in/musmustapha-kamel-chérif"
