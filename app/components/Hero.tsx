@@ -15,7 +15,7 @@ export const Hero = () => {
                 </div>
                 <div  className="flex-1">
                     <Image 
-                        src="https://media.licdn.com/dms/image/D4E03AQHJv3a8YtyG-g/profile-displayphoto-shrink_800_800/0/1714805850697?e=1727308800&v=beta&t=WLITvdYocoOSULWOQ00OTvyLvIqvnwoEx71LoXifkqA" 
+                        src="/me.png" 
                         alt="kamel cherif"
                         className="w-full h-auto max-w-xs shadow-xl rounded-full"
                         width={500} height={500}
