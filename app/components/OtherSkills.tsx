@@ -30,11 +30,25 @@ export const OtherSkills = () => {
                                 ))}
                         </Card> 
                     </div>
-                    <Card className="flex flex-col md:flex-row gap-2 w-full">
-                        <div className="p-0 flex-[2] shadow-md rounded-xl">
+                    <div className="flex flex-col md:flex-row gap-2 w-full">
+                        <Card className="p-0 flex-[2] shadow-md rounded-xl">
                             <AnimatedBeamDemo></AnimatedBeamDemo>
-                        </div>
-                    </Card>
+                        </Card>
+                        <Card className="p-4 flex-[1] shadow-md rounded-xl">
+                            <p className="text-sm text-muted-foreground mb-2">Programming Languages</p>
+                            <div className="flex flex-col gap-2">
+                            {LANGUAGES.map((tool, index) => (
+                                        <Languages
+                                            key={index}
+                                            image={tool.image}
+                                            title={tool.title}
+                                            description={tool.description}
+                                            url="/"
+                                        />
+                                    ))}
+                            </div>
+                        </Card>
+                    </div>
                     <div className="flex flex-col md:flex-row gap-2 w-full">
                         <div className="flex flex-col">
                             <Card className="p-4 flex-[1] shadow-md rounded-xl">
@@ -117,6 +131,12 @@ const MANAGMENT_TOOLS: ManagmentToolsProps[] = [
         image: "https://static-00.iconduck.com/assets.00/docker-icon-1024x739-rivf80b4.png",
         title: "Docker",
         description: "Platform for developing, shipping, and running applications in containers.",
+        url:"/"
+    },
+    {
+        image: "https://cdn.svgporn.com/logos/github-icon.svg",
+        title: "Github",
+        description: "Platform for hosting and collaborating on code, using Git for version control and project management.",
         url:"/"
     },
 ]
@@ -240,9 +260,21 @@ const DATABASES: DatabasesProps[] = [
         url:"/"
     },
     {
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png",
+        title: "Postgresql",
+        description: "elational database known for its stability, scalability, and advanced features.",
+        url:"/"
+    },
+    {
         image: "https://www.svgrepo.com/show/353735/firebase.svg",
         title: "Firebase",
         description: "Firebase offers real-time, cloud databases for apps.",
+        url:"/"
+    },
+    {
+        image: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+        title: "MongoDB",
+        description: "Database that stores data in flexible, JSON-like documents for scalability.",
         url:"/"
     },
 ]
@@ -255,6 +287,55 @@ type DatabasesProps = {
 }
 
 const Databases = (props: DatabasesProps) =>{
+    return (
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+            
+            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            
+            <div>
+                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
+                <p className="text-sm text-muted-foreground">{props.description}</p>
+            </div>
+        </div>
+    )
+}
+
+//Languages //
+const LANGUAGES: LanguagesProps[] = [
+    {
+        image: "https://cdn.svgporn.com/logos/javascript.svg",
+        title: "JavaScript",
+        description: "JavaScript adds interactivity to web pages.",
+        url:"/"
+    },
+    {
+        image: "https://cdn.svgporn.com/logos/typescript-icon.svg",
+        title: "TypeScript",
+        description: "TypeScript is a superset of JavaScript that adds static types.",
+        url:"/"
+    },
+    {
+        image: "https://cdn.svgporn.com/logos/c-sharp.svg",
+        title: "C Sharp",
+        description: "C# is a modern, object-oriented language by Microsoft.",
+        url:"/"
+    },
+    {
+        image: "https://cdn.svgporn.com/logos/php.svg",
+        title: "PHP",
+        description: "PHP is a server-side scripting language designed for web development.",
+        url:"/"
+    },
+]
+
+type LanguagesProps = {
+    image: string;
+    title: string;
+    description: string;
+    url: string;
+}
+
+const Languages = (props: LanguagesProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             

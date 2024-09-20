@@ -33,7 +33,9 @@ const slugs = [
   "figma",
   "laravel",
   "symfony",
-  "oracle"
+  "oracle",
+  "c#",
+  "mongodb"
 ];
 
 export function IconCloudDemo() {
