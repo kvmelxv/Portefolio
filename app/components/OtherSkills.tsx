@@ -110,31 +110,31 @@ export const OtherSkills = () => {
 // Managmenttools //
 const MANAGMENT_TOOLS: ManagmentToolsProps[] = [
     {
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/ZOHO.svg/2560px-ZOHO.svg.png",
+        image: "https://cdn.svgporn.com/logos/zoho.svg",
         title: "Zoho",
         description: "Cloud-based suite for business applications, including CRM, project management, and more.",
         url:"/"
     },
     {
-        image: "https://seeklogo.com/images/J/jira-logo-FD39F795A7-seeklogo.com.png",
+        image: "https://cdn.svgporn.com/logos/jira.svg",
         title: "Jira",
         description: "Project management tool for tracking and managing software development tasks and workflows.",
         url:"/"
     },
     {
-        image: "https://cdn.worldvectorlogo.com/logos/bitbucket-icon.svg",
+        image: "https://cdn.svgporn.com/logos/bitbucket.svg",
         title: "Bitbucket",
         description: "Git repository management tool for collaborative code development and version control.",
         url:"/"
     },
     {
-        image: "https://static-00.iconduck.com/assets.00/docker-icon-1024x739-rivf80b4.png",
+        image: "https://cdn.svgporn.com/logos/docker-icon.svg",
         title: "Docker",
         description: "Platform for developing, shipping, and running applications in containers.",
         url:"/"
     },
     {
-        image: "https://cdn.svgporn.com/logos/github-icon.svg",
+        image: "https://www.svgrepo.com/show/439171/github.svg",
         title: "Github",
         description: "Platform for hosting and collaborating on code, using Git for version control and project management.",
         url:"/"
@@ -166,7 +166,7 @@ const ManagmentTools = (props: ManagmentToolsProps) =>{
 // Design tools //
 const DESIGN_TOOLS: DesignToolsProps[] = [
     {
-        image: "https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png",
+        image: "https://cdn.svgporn.com/logos/figma.svg",
         title: "Figma",
         description: "Cloud-based UI design tool with real-time collaboration features.",
         url:"/"
