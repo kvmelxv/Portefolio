@@ -28,19 +28,19 @@ const slugs = [
   "github",
   "gitlab",
   "visualstudiocode",
-  "androidstudio",
   "bitbucket",
   "figma",
   "laravel",
   "symfony",
   "oracle",
   "c#",
-  "mongodb"
+  "mongodb",
+  "supabase"
 ];
 
 export function IconCloudDemo() {
   return (
-    <div className="relative flex h-[365px] w-full max-w-[25rem] items-center justify-center overflow-hidden px-10 pb-20 pt-8 m-auto">
+    <div className="relative flex h-[450px] w-full max-w-[29rem] items-center justify-center overflow-hidden px-10 pb-20 pt-8 m-auto">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

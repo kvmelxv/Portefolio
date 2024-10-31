@@ -117,19 +117,10 @@ const DATA = {
   }
 };
 
-const transition = { duration: 0.8, ease: "easeOut" }
-const dockVariants = {
-  hidden: { y: "100%", opacity: 0, },
-  visible: { y: "0%", opacity: 1 , transition},
-  exit: { y: "100%", opacity: 0 , transition}
-};
-
 export function DockDemo() {
   return (
-
-    <motion.div initial="hidden" animate="visible" variants={dockVariants}>
         <TooltipProvider>
-              <Dock direction="middle" className="fixed bottom-5 left-0 right-0 z-50 rounded-full drop-shadow-lg">
+              <Dock direction="middle" className="fixed bottom-8 left-0 right-0 z-50 rounded-full drop-shadow-lg">
                 {DATA.navbar.map((item) => (
                   <DockIcon key={item.label}>
                     <Tooltip>
@@ -192,10 +183,6 @@ export function DockDemo() {
                 ))}
               </Dock>
           </TooltipProvider>
-
-
-
-    </motion.div>
   
   );
 }

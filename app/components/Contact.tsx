@@ -62,7 +62,7 @@ type ContactProps = {
 
 const ContactBloc = (props: ContactProps) =>{
     return (
-        <Link href={props.url} className="w-full p-3 bg-accent/10 flex items-center gap-4 hover:bg-accent/30 transition-colors group cursor-pointer">
+        <Link href={props.url} className="w-full p-3 bg-accent/10 flex items-center gap-4 hover:bg-accent/30 transition-colors group cursor-pointer shadow-md">
             <div className="relative ">
                 <Image src={props.image} alt={props.name} className="w-12 h-12 rounded-full object-contain" width={100} height={100}/>
                 <Image src={props.mediumImage} alt={props.name} className="w-5 h-5 absolute -bottom-1 -right-1 rounded-full object-contain" width={100} height={100}/>

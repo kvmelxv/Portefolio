@@ -18,7 +18,7 @@ export const Hero = () => {
                         src="/me.png" 
                         alt="kamel cherif"
                         className="w-full h-auto max-w-xs shadow-xl rounded-full"
-                        width={500} height={500}
+                        width={100} height={100}
                     />
                 </div>
             </Section>

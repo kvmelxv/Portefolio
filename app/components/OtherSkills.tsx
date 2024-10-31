@@ -1,7 +1,4 @@
 import { Section } from "./Section"
-import { IconCloudDemo } from "./IconCloud"
-import { AnimatedBeamDemo } from "./AnimatedBeam"
-/* import BlurFade from "@/components/magicui/blur-fade"; */
 import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 
@@ -14,9 +11,6 @@ export const OtherSkills = () => {
             <div className="flex flex-col md:flex-row items-center justify-between p-0 gap-4"></div>
                 <div className="flex-1 max-w-full md:max-w-[100%] flex flex-col gap-4 w-full">
                     <div className="flex flex-col md:flex-row gap-2 w-full">
-                        <Card className="p-0 flex-[1] shadow-md rounded-xl">
-                            <IconCloudDemo></IconCloudDemo>
-                        </Card>
                         <Card className="p-4 flex-[2] border border-md shadow-md rounded-xl">
                             <p className="text-sm text-muted-foreground mb-2">My top skills are ...</p>
                             {TOP_SKILLS.map((tool, index) => (
@@ -29,11 +23,6 @@ export const OtherSkills = () => {
                                     />
                                 ))}
                         </Card> 
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-2 w-full">
-                        <Card className="p-0 flex-[2] shadow-md rounded-xl">
-                            <AnimatedBeamDemo></AnimatedBeamDemo>
-                        </Card>
                         <Card className="p-4 flex-[1] shadow-md rounded-xl">
                             <p className="text-sm text-muted-foreground mb-2">Programming Languages</p>
                             <div className="flex flex-col gap-2">
@@ -50,12 +39,28 @@ export const OtherSkills = () => {
                         </Card>
                     </div>
                     <div className="flex flex-col md:flex-row gap-2 w-full">
-                        <div className="flex flex-col">
+                        <div className="flex flex-[1]">
                             <Card className="p-4 flex-[1] shadow-md rounded-xl">
                                 <p className="text-sm text-muted-foreground mb-2">Databases</p>
                                 <div className="flex flex-col gap-1">
                                 {DATABASES.map((tool, index) => (
                                         <Databases
+                                            key={index}
+                                            image={tool.image}
+                                            title={tool.title}
+                                            description={tool.description}
+                                            url="/"
+                                        />
+                                    ))}
+                                </div>
+                            </Card>
+                        </div>
+                        <div className="flex flex-col flex-[2] gap-2">
+                            <Card className="p-4 flex-[2] shadow-md rounded-xl">
+                                <p className="text-sm text-muted-foreground mb-2">Management and Productivity Tools</p>
+                                <div className="flex flex-col gap-1">
+                                {MANAGMENT_TOOLS.map((tool, index) => (
+                                        <ManagmentTools
                                             key={index}
                                             image={tool.image}
                                             title={tool.title}
@@ -80,26 +85,9 @@ export const OtherSkills = () => {
                                 </div>
                             </Card>
                         </div>
-                        <Card className="p-4 flex-[1] shadow-md rounded-xl">
-                            <p className="text-sm text-muted-foreground mb-2">Management and Productivity Tools</p>
-                            <div className="flex flex-col gap-1">
-                            {MANAGMENT_TOOLS.map((tool, index) => (
-                                    <ManagmentTools
-                                        key={index}
-                                        image={tool.image}
-                                        title={tool.title}
-                                        description={tool.description}
-                                        url="/"
-                                    />
-                                ))}
-                            </div>
-                        </Card>
                     </div>
                 </div>
-            {/* <div className="flex-1 max-w-full md:max-w-[30%] w-full">
-                <IconCloudDemo></IconCloudDemo>
-            </div> */}
-        </Section>
+            </Section>
 
       /*   </BlurFade> */
         
@@ -109,12 +97,6 @@ export const OtherSkills = () => {
 
 // Managmenttools //
 const MANAGMENT_TOOLS: ManagmentToolsProps[] = [
-    {
-        image: "https://cdn.svgporn.com/logos/zoho.svg",
-        title: "Zoho",
-        description: "Cloud-based suite for business applications, including CRM, project management, and more.",
-        url:"/"
-    },
     {
         image: "https://cdn.svgporn.com/logos/jira.svg",
         title: "Jira",
@@ -152,11 +134,11 @@ const ManagmentTools = (props: ManagmentToolsProps) =>{
     return (
         <div /* href={props.url} */ className="w-full inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
+                <p className="text-xs text-muted-foreground">{props.description}</p>
             </div>
         </div>
     )
@@ -184,11 +166,11 @@ const DesingTools = (props: DesignToolsProps) =>{
     return (
         <div /* href={props.url} */ className="w-full inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
+                <p className="text-xs text-muted-foreground">{props.description}</p>
             </div>
         </div>
     )
@@ -198,31 +180,31 @@ const DesingTools = (props: DesignToolsProps) =>{
 // Top Skills //
 const TOP_SKILLS: TopSkillsProps[] = [
     {
-        image: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+        image: "https://cdn.svgporn.com/logos/react.svg",
         title: "React",
         description: "JavaScript library for building dynamic and responsive user interfaces.",
         url:"/"
     },
     {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnhoVwuJmtF1Lu4t9WcsZ7fESV9KdIQ7pVHw&s",
+        image: "https://cdn.svgporn.com/logos/laravel.svg",
         title: "Laravel",
         description: "PHP framework for crafting elegant and scalable web applications.",
         url:"/"
     },
     {
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+        image: "https://cdn.svgporn.com/logos/typescript-icon.svg",
         title: "Typescript",
         description: "JavaScript superset that enhances development with static types and better tooling.",
         url:"/"
     },
     {
-        image: "https://exafunction.github.io/public/icons/nextjs.png",
+        image: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
         title: "Next.js",
         description: "React framework for optimized server-side rendering and static site generation.",
         url:"/"
     },
     {
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+        image: "https://cdn.svgporn.com/logos/git-icon.svg",
         title: "Git",
         description: "Version control system for managing code changes and facilitating team collaboration.",
         url:"/"
@@ -277,6 +259,12 @@ const DATABASES: DatabasesProps[] = [
         description: "Database that stores data in flexible, JSON-like documents for scalability.",
         url:"/"
     },
+    {
+        image: "https://cdn.svgporn.com/logos/supabase-icon.svg",
+        title: "Supabase",
+        description: "An open-source backend platform with PostgreSQL, real-time data, authentication, and storage.",
+        url:"/"
+    }
 ]
 
 type DatabasesProps = {
@@ -290,11 +278,11 @@ const Databases = (props: DatabasesProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
+                <p className="text-xs text-muted-foreground">{props.description}</p>
             </div>
         </div>
     )
@@ -339,11 +327,11 @@ const Languages = (props: LanguagesProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
+                <p className="text-xs text-muted-foreground">{props.description}</p>
             </div>
         </div>
     )

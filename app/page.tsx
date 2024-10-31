@@ -7,6 +7,8 @@ import { OtherSkills } from "./components/OtherSkills";
 import { Footer } from "./components/Footer";
 import { BlurFadeDemo } from "./components/Catalogue";
 import { DockDemo } from "./components/Doke";
+import { ScrollBasedVelocityDemo } from "./components/ScrollText";
+import { AfterHero } from "./components/AfterHero";
 
 export default function Home() {
   return (
@@ -20,6 +22,10 @@ export default function Home() {
       
       <Hero></Hero>
 
+      {/* <Spacing size="xs"/> */}
+
+      {/* <AfterHero/> */}
+
       <Spacing size="md"/>
 
       <Status></Status>
@@ -27,6 +33,14 @@ export default function Home() {
       <Spacing size="md"/>
 
       <OtherSkills></OtherSkills>
+
+      <Spacing size="lg"/>
+
+      <ScrollBasedVelocityDemo/>
+
+      <Spacing size="lg"/>
+
+      <AfterHero/>
 
       <Spacing size="md"/>
 
