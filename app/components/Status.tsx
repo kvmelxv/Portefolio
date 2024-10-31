@@ -128,7 +128,7 @@ const EXPERIENCES: ExperienceProps[] = [
         url: "/",
     },
     {
-        image: "https://media.licdn.com/dms/image/C4D0BAQGtRK85Qemeew/company-logo_100_100/0/1631324350610?e=1729728000&v=beta&t=zV2zjyyUWXH0Ux8WF8eZp9j3Tkw2lpaQjAUhYxsPPMs",
+        image: "https://pbs.twimg.com/profile_images/751081116539424768/NBqZeo8c_400x400.jpg",
         title: "Planhub",
         role: "Intern Front-end Developer",
         date: "May 2024 - July 2024",
@@ -162,7 +162,7 @@ const Experience = (props: ExperienceProps) =>{
 // Education //
 const EDUCATION: EducationProps[] = [
     {
-        image: "https://media.licdn.com/dms/image/C4E0BAQFJ2fPiQQwzPQ/company-logo_100_100/0/1630584791614/collegedemaisonneuve_logo?e=1729728000&v=beta&t=hp8IxmuRzPa-PXsG0adwhakNlyWVdqQpfiMnupkBN9U",
+        image: "https://www.cmaisonneuve.qc.ca/wp-content/uploads/2021/05/cropped-favicon-cm.png",
         title: "College Maisonneuve",
         city: "Montreal, Canada",
         curriculum : "Website design and programming",

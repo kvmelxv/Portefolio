@@ -10,7 +10,8 @@ const nextConfig = {
             'seeklogo.com',
             'lh3.googleusercontent.com',
             'cdn2.downdetector.com',
-            'pbs.twimg.com'],
+            'pbs.twimg.com',
+            'www.cmaisonneuve.qc.ca'],
       },
 };
 
