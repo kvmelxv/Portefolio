@@ -10,7 +10,7 @@ export const OtherSkills = () => {
             <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">What I master the most</h2>
             <div className="flex flex-col md:flex-row items-center justify-between p-0 gap-4"></div>
                 <div className="flex-1 max-w-full md:max-w-[100%] flex flex-col gap-4 w-full">
-                    <div className="flex flex-col md:flex-row gap-2 w-full">
+                    <div className="flex flex-col md:flex-row gap-4 w-full">
                         <Card className="p-4 flex-[2] border border-md shadow-md rounded-xl">
                             <p className="text-sm text-muted-foreground mb-2">My top skills are ...</p>
                             {TOP_SKILLS.map((tool, index) => (
@@ -38,7 +38,7 @@ export const OtherSkills = () => {
                             </div>
                         </Card>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-2 w-full">
+                    <div className="flex flex-col md:flex-row gap-4 w-full">
                         <div className="flex flex-[1]">
                             <Card className="p-4 flex-[1] shadow-md rounded-xl">
                                 <p className="text-sm text-muted-foreground mb-2">Databases</p>
@@ -55,7 +55,7 @@ export const OtherSkills = () => {
                                 </div>
                             </Card>
                         </div>
-                        <div className="flex flex-col flex-[2] gap-2">
+                        <div className="flex flex-col flex-[2] gap-4">
                             <Card className="p-4 flex-[2] shadow-md rounded-xl">
                                 <p className="text-sm text-muted-foreground mb-2">Management and Productivity Tools</p>
                                 <div className="flex flex-col gap-1">

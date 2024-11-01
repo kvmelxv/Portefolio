@@ -27,7 +27,7 @@ export const Status = () => {
                             </div>
                         </Card>
                     </div>
-                    <div className="flex-[2] flex flex-col gap-2 w-full">
+                    <div className="flex-[2] flex flex-col gap-4 w-full">
                         <Card className="p-4 flex-1">
                             <p className="text-sm text-muted-foreground mb-2">Experiences</p>
                             <div className="flex flex-col gap-4">
@@ -106,12 +106,12 @@ type SideProjectsProps = {
 const SideProject = (props: SideProjectsProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded cursor-pointer">
-            <span className="bg-accent text-accent-forground p-4 rounded-sm">
+            <span className="bg-accent text-accent-forground p-3 rounded-sm">
                 <props.logo size={20}/>
             </span>
             <div>
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <p className="text-md font-semibold">{props.title}</p>
+                <p className="text-xs text-muted-foreground">{props.description}</p>
             </div>
         </div>
     )
@@ -147,13 +147,13 @@ type ExperienceProps = {
 const Experience = (props: ExperienceProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded cursor-pointer">
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             <div>
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.role}</p>
+                <p className="text-md font-semibold">{props.title}</p>
+                <p className="text-xs text-muted-foreground">{props.role}</p>
             </div>
             <div className="ml-auto">
-                <p className="text-sm text-muted-foreground">{props.date}</p>
+                <p className="text-xs text-muted-foreground">{props.date}</p>
             </div>
         </div>
     )
@@ -184,13 +184,13 @@ type EducationProps = {
 const Education = (props: EducationProps) =>{
     return (
         <div className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 mt-4 rounded cursor-pointer">
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             <div>
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.curriculum}</p>
+                <p className="text-md font-semibold">{props.title}</p>
+                <p className="text-xs text-muted-foreground">{props.curriculum}</p>
             </div>
             <div className="ml-auto">
-                <p className="text-sm text-muted-foreground">{props.date}</p>
+                <p className="text-xs text-muted-foreground">{props.date}</p>
             </div>
         </div>
     )

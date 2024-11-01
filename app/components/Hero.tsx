@@ -15,10 +15,10 @@ export const Hero = () => {
                 </div>
                 <div  className="flex-1">
                     <Image 
-                        src="/me.png" 
+                        src="/developer_male-removebg-preview.png" 
                         alt="kamel cherif"
-                        className="w-full h-auto max-w-xs shadow-xl rounded-full"
-                        width={100} height={100}
+                        className="w-full h-auto max-w-sm"
+                        width={1000} height={1000}
                     />
                 </div>
             </Section>

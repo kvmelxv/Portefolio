@@ -22,23 +22,19 @@ export default function Home() {
       
       <Hero></Hero>
 
-      {/* <Spacing size="xs"/> */}
-
-      {/* <AfterHero/> */}
-
       <Spacing size="md"/>
 
       <Status></Status>
-
-      <Spacing size="md"/>
-
-      <OtherSkills></OtherSkills>
 
       <Spacing size="lg"/>
 
       <ScrollBasedVelocityDemo/>
 
       <Spacing size="lg"/>
+
+      <OtherSkills></OtherSkills>
+
+      <Spacing size="md"/>
 
       <AfterHero/>
 
