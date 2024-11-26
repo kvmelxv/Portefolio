@@ -28,23 +28,7 @@ export const Status = () => {
                         </Card>
                     </div>
                     <div className="flex-[2] flex flex-col gap-4 w-full">
-                        <Card className="p-4 flex-1">
-                            <p className="text-sm text-muted-foreground mb-2">Experiences</p>
-                            <div className="flex flex-col gap-4">
-                                {EXPERIENCES.map((work, index) => ( 
-                                    <Experience
-                                    key={index}
-                                    image={work.image}
-                                    title={work.title}
-                                    role={work.role}
-                                    date={work.date}
-                                    url={work.url}
-                                    />
-                                ))}
-
-                            </div>
-                        </Card>
-                        <Card className="p-4 flex-1">
+                    <Card className="p-4 flex-1">
                             <p className="text-sm text-muted-foreground mb-2">Education</p>
                             <div className="flex flex-col gap-4">
                                 {EDUCATION.map((school, index) => ( 
@@ -56,6 +40,22 @@ export const Status = () => {
                                     curriculum={school.curriculum}
                                     date={school.date}
                                     url={school.url}
+                                    />
+                                ))}
+
+                            </div>
+                        </Card>
+                        <Card className="p-4 flex-1">
+                            <p className="text-sm text-muted-foreground mb-2">Experiences</p>
+                            <div className="flex flex-col gap-4">
+                                {EXPERIENCES.map((work, index) => ( 
+                                    <Experience
+                                    key={index}
+                                    image={work.image}
+                                    title={work.title}
+                                    role={work.role}
+                                    date={work.date}
+                                    url={work.url}
                                     />
                                 ))}
 
@@ -120,13 +120,13 @@ const SideProject = (props: SideProjectsProps) =>{
 
 // Experience //
 const EXPERIENCES: ExperienceProps[] = [
-    {
+   /*  {
         image: "https://cdn.worldvectorlogo.com/logos/freelancer-1.svg",
         title: "Freelancer",
         role: "Full Stack Developer",
         date: "July 2024 - Until Today",
         url: "/",
-    },
+    }, */
     {
         image: "https://pbs.twimg.com/profile_images/751081116539424768/NBqZeo8c_400x400.jpg",
         title: "Planhub",
@@ -163,10 +163,18 @@ const Experience = (props: ExperienceProps) =>{
 const EDUCATION: EducationProps[] = [
     {
         image: "https://www.cmaisonneuve.qc.ca/wp-content/uploads/2021/05/cropped-favicon-cm.png",
-        title: "College Maisonneuve",
+        title: "Website Design and Programming",
         city: "Montreal, Canada",
-        curriculum : "Website design and programming",
+        curriculum : "College Maisonneuve",
         date: "Feb 2023 - July 2024",
+        url: "/",
+    },
+    {
+        image: "https://cdn.svgporn.com/logos/aws.svg",
+        title: "AWS Certified Developer - Associate",
+        city: "Montreal, Canada",
+        curriculum : "Amazon Web Service",
+        date: "",
         url: "/",
     },
     
@@ -186,7 +194,7 @@ const Education = (props: EducationProps) =>{
         <div className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 mt-4 rounded cursor-pointer">
             <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             <div>
-                <p className="text-md font-semibold">{props.title}</p>
+                <p className="text-sm font-semibold">{props.title}</p>
                 <p className="text-xs text-muted-foreground">{props.curriculum}</p>
             </div>
             <div className="ml-auto">

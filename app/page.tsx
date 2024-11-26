@@ -26,15 +26,15 @@ export default function Home() {
 
       <Status></Status>
 
-      <Spacing size="lg"/>
-
-      <ScrollBasedVelocityDemo/>
-
-      <Spacing size="lg"/>
+      <Spacing size="md"/>
 
       <OtherSkills></OtherSkills>
 
       <Spacing size="md"/>
+
+      <ScrollBasedVelocityDemo/>
+
+      <Spacing size="lg"/>
 
       <AfterHero/>
 

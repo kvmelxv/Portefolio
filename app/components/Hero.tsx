@@ -15,9 +15,9 @@ export const Hero = () => {
                 </div>
                 <div  className="flex-1">
                     <Image 
-                        src="/developer_male-removebg-preview.png" 
+                        src="/me.png" 
                         alt="kamel cherif"
-                        className="w-full h-auto max-w-sm"
+                        className="w-full h-auto max-w-xs rounded-full"
                         width={1000} height={1000}
                     />
                 </div>

@@ -14,7 +14,7 @@ export function BlurFadeDemo() {
       <p className="text-xl text-muted-foreground">Works</p>
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">Showcase of My Recent Projects</h2>
       <section id="videos">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {videos.map((videoUrl, idx) => (
             /* <BlurFade key={videoUrl} delay={0.25 + idx * 0.05} inView> */
               <video

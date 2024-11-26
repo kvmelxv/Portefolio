@@ -191,12 +191,12 @@ const TOP_SKILLS: TopSkillsProps[] = [
         description: "PHP framework for crafting elegant and scalable web applications.",
         url:"/"
     },
-    {
+   /*  {
         image: "https://cdn.svgporn.com/logos/typescript-icon.svg",
         title: "Typescript",
         description: "JavaScript superset that enhances development with static types and better tooling.",
         url:"/"
-    },
+    }, */
     {
         image: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
         title: "Next.js",
@@ -302,12 +302,12 @@ const LANGUAGES: LanguagesProps[] = [
         description: "TypeScript is a superset of JavaScript that adds static types.",
         url:"/"
     },
-    {
+    /* {
         image: "https://cdn.svgporn.com/logos/c-sharp.svg",
         title: "C Sharp",
         description: "C# is a modern, object-oriented language by Microsoft.",
         url:"/"
-    },
+    }, */
     {
         image: "https://cdn.svgporn.com/logos/php.svg",
         title: "PHP",
