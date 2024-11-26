@@ -174,7 +174,7 @@ const EDUCATION: EducationProps[] = [
         title: "AWS Certified Developer - Associate",
         city: "Montreal, Canada",
         curriculum : "Amazon Web Service",
-        date: "",
+        date: "In Progress",
         url: "/",
     },
     
