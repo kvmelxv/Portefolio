@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const Contact = () => {
     return (
         /* <BlurFade delay={0.25} inView> */
-            <Section className="flex flex-col gap-4">
+            <Section className="flex flex-col">
                 <p className="text-xl text-muted-foreground">Contact me</p>
                 <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">I will be happy to work with you.</h2>
                 <div className="flex max-md:flex-col gap-4">

@@ -11,7 +11,8 @@ const nextConfig = {
             'lh3.googleusercontent.com',
             'cdn2.downdetector.com',
             'pbs.twimg.com',
-            'www.cmaisonneuve.qc.ca'],
+            'www.cmaisonneuve.qc.ca',
+            'ressources-medias.uqam.ca'],
       },
 };
 

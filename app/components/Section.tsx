@@ -20,5 +20,5 @@ export const Section = (props: PropsWithChildren<{className?:string}>) => {
     const isInView = useInView(ref, { once: true });
 
 
-    return <motion.section key='section' ref={ref} initial= 'hidden' animate={isInView ? 'visible' : 'hidden'}  exit= 'exit' variants={variantsy} className={cn("max-w-7xl px-4 m-auto", props.className)}>{props.children}</motion.section>
+    return <motion.section key='section' ref={ref} initial= 'hidden' animate={isInView ? 'visible' : 'hidden'}  exit= 'exit' variants={variantsy} className={cn("max-w-5xl px-4 m-auto", props.className)}>{props.children}</motion.section>
 }; 

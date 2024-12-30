@@ -32,14 +32,6 @@ export default function Home() {
 
       <Spacing size="md"/>
 
-      <ScrollBasedVelocityDemo/>
-
-      <Spacing size="lg"/>
-
-      <AfterHero/>
-
-      <Spacing size="md"/>
-
       <BlurFadeDemo></BlurFadeDemo>
 
       <Spacing size="md"/>

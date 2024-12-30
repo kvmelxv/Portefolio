@@ -9,12 +9,13 @@ export const OtherSkills = () => {
             <p className="text-xl text-muted-foreground">Technical skills</p>
             <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">What I master the most</h2>
             <div className="flex flex-col md:flex-row items-center justify-between p-0 gap-4"></div>
-                <div className="flex-1 max-w-full md:max-w-[100%] flex flex-col gap-4 w-full">
-                    <div className="flex flex-col md:flex-row gap-4 w-full">
-                        <Card className="p-4 flex-[2] border border-md shadow-md rounded-xl">
-                            <p className="text-sm text-muted-foreground mb-2">My top skills are ...</p>
+                <div className="flex-1 max-w-full md:max-w-[100%] flex flex-col gap-2 w-full">
+                    <div className="flex flex-col gap-1 w-full max-w-4xl m-auto">
+                        <div className="p-4 flex flex-col gap-1">
+                            <p className="text-sm  mb-2">Top skills</p> 
+                            <div className="flex flex-wrap gap-2">
                             {TOP_SKILLS.map((tool, index) => (
-                                    <DesingTools
+                                    <TopSkills
                                         key={index}
                                         image={tool.image}
                                         title={tool.title}
@@ -22,10 +23,11 @@ export const OtherSkills = () => {
                                         url="/"
                                     />
                                 ))}
-                        </Card> 
-                        <Card className="p-4 flex-[1] shadow-md rounded-xl">
-                            <p className="text-sm text-muted-foreground mb-2">Programming Languages</p>
-                            <div className="flex flex-col gap-2">
+                            </div>
+                        </div>
+                        <div className="p-4 flex flex-col gap-1">
+                            <p className="text-sm mb-2">Programming Languages</p>
+                            <div className="flex flex-wrap gap-2">
                             {LANGUAGES.map((tool, index) => (
                                         <Languages
                                             key={index}
@@ -36,54 +38,48 @@ export const OtherSkills = () => {
                                         />
                                     ))}
                             </div>
-                        </Card>
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-4 w-full">
-                        <div className="flex flex-[1]">
-                            <Card className="p-4 flex-[1] shadow-md rounded-xl">
-                                <p className="text-sm text-muted-foreground mb-2">Databases</p>
-                                <div className="flex flex-col gap-1">
-                                {DATABASES.map((tool, index) => (
-                                        <Databases
-                                            key={index}
-                                            image={tool.image}
-                                            title={tool.title}
-                                            description={tool.description}
-                                            url="/"
-                                        />
-                                    ))}
-                                </div>
-                            </Card>
                         </div>
-                        <div className="flex flex-col flex-[2] gap-4">
-                            <Card className="p-4 flex-[2] shadow-md rounded-xl">
-                                <p className="text-sm text-muted-foreground mb-2">Management and Productivity Tools</p>
-                                <div className="flex flex-col gap-1">
-                                {MANAGMENT_TOOLS.map((tool, index) => (
-                                        <ManagmentTools
-                                            key={index}
-                                            image={tool.image}
-                                            title={tool.title}
-                                            description={tool.description}
-                                            url="/"
-                                        />
-                                    ))}
-                                </div>
-                            </Card>
-                            <Card className="p-4 flex-[1] shadow-md rounded-xl">
-                                <p className="text-sm text-muted-foreground mb-2">Design Tools</p>
-                                <div className="flex flex-col gap-1">
-                                {DESIGN_TOOLS.map((tool, index) => (
-                                        <DesingTools
-                                            key={index}
-                                            image={tool.image}
-                                            title={tool.title}
-                                            description={tool.description}
-                                            url="/"
-                                        />
-                                    ))}
-                                </div>
-                            </Card>
+                        <div className="p-4 flex flex-col gap-1">
+                            <p className="text-sm mb-2">Databases</p>
+                            <div className="flex flex-wrap gap-2">
+                            {DATABASES.map((tool, index) => (
+                                    <Databases
+                                        key={index}
+                                        image={tool.image}
+                                        title={tool.title}
+                                        description={tool.description}
+                                        url="/"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="p-4 flex flex-col gap-1">
+                            <p className="text-sm mb-2">Management and Productivity Tools</p>
+                            <div className="flex flex-wrap gap-2">
+                            {MANAGMENT_TOOLS.map((tool, index) => (
+                                    <ManagmentTools
+                                        key={index}
+                                        image={tool.image}
+                                        title={tool.title}
+                                        description={tool.description}
+                                        url="/"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="p-4 flex flex-col gap-1">
+                            <p className="text-sm mb-2">Design Tools</p>
+                            <div className="flex flex-wrap gap-2">
+                            {DESIGN_TOOLS.map((tool, index) => (
+                                    <DesingTools
+                                        key={index}
+                                        image={tool.image}
+                                        title={tool.title}
+                                        description={tool.description}
+                                        url="/"
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,13 +128,12 @@ type ManagmentToolsProps = {
 
 const ManagmentTools = (props: ManagmentToolsProps) =>{
     return (
-        <div /* href={props.url} */ className="w-full inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -164,13 +159,12 @@ type DesignToolsProps = {
 
 const DesingTools = (props: DesignToolsProps) =>{
     return (
-        <div /* href={props.url} */ className="w-full inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -222,11 +216,10 @@ const TopSkills = (props: TopSkillsProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-md font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -281,8 +274,7 @@ const Databases = (props: DatabasesProps) =>{
             <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -302,12 +294,6 @@ const LANGUAGES: LanguagesProps[] = [
         description: "TypeScript is a superset of JavaScript that adds static types.",
         url:"/"
     },
-    /* {
-        image: "https://cdn.svgporn.com/logos/c-sharp.svg",
-        title: "C Sharp",
-        description: "C# is a modern, object-oriented language by Microsoft.",
-        url:"/"
-    }, */
     {
         image: "https://cdn.svgporn.com/logos/php.svg",
         title: "PHP",
@@ -327,11 +313,10 @@ const Languages = (props: LanguagesProps) =>{
     return (
         <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
             
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">{props.title}</h4>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
+                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
