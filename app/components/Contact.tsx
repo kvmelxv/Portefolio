@@ -2,15 +2,21 @@ import { ArrowUpRight } from "lucide-react"
 import { Section } from "./Section"
 import Image from 'next/image';
 import Link from 'next/link'
-/* import BlurFade from "@/components/magicui/blur-fade";
- */
+import clsx from 'clsx';
+import { Poiret_One } from "next/font/google";
+
+const permanentMarker = Poiret_One({
+    subsets: ['latin'], // Personnalisez selon vos besoins
+    weight: '400',      // Ajoutez d'autres styles si nécessaire
+  });
+  
 export const Contact = () => {
     return (
         /* <BlurFade delay={0.25} inView> */
             <Section className="flex flex-col">
-                <p className="text-xl text-muted-foreground">Contact me</p>
+                <p className={clsx(permanentMarker.className,'text-xl')}>Contact me</p>
                 <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">I will be happy to work with you.</h2>
-                <div className="flex max-md:flex-col gap-4">
+                <div className="flex max-md:flex-col gap-4"> 
                     {CONTACT.map((link, index) => (
                         <ContactBloc
                             key={index}
@@ -39,7 +45,7 @@ const CONTACT: ContactProps[] = [
     {
         name: "Mustapha kamel cherif",
         image: "/me.png",
-        mediumImage: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1729728000&v=beta&t=HfNEW1PaZMlCAQFpnT7dEELwx5TUX2XFsSwpoXhUmFQ",
+        mediumImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png",
         description:"Contact me via Linkedin.",
         url: "https://linkedin.com/in/musmustapha-kamel-chérif"
     },
@@ -62,14 +68,14 @@ type ContactProps = {
 
 const ContactBloc = (props: ContactProps) =>{
     return (
-        <Link href={props.url} className="w-full p-3 bg-accent/10 flex items-center gap-4 hover:bg-accent/30 transition-colors group cursor-pointer shadow-md">
+        <Link href={props.url} className="w-full p-2 bg-accent/10 flex items-center gap-4 hover:bg-accent/30 transition-colors group cursor-pointer shadow-md">
             <div className="relative ">
-                <Image src={props.image} alt={props.name} className="w-12 h-12 rounded-full object-contain" width={100} height={100}/>
+                <Image src={props.image} alt={props.name} className="w-11 h-11 rounded-full object-contain" width={100} height={100}/>
                 <Image src={props.mediumImage} alt={props.name} className="w-5 h-5 absolute -bottom-1 -right-1 rounded-full object-contain" width={100} height={100}/>
             </div>
             <div className="mr-auto">
-                <div className="flex items-center gap-2 mb-2">
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">{props.name}</p>
+                <div className="flex items-center gap-2">
+                    <p className="text-sm leading-7 [&:not(:first-child)]:mt-6">{props.name}</p>
                 </div>
                 <p className="text-xs text-muted-foreground">{props.description}</p>        
             </div>

@@ -1,18 +1,24 @@
 import { Section } from "./Section"
-import { Card } from "@/components/ui/card";
 import Image from 'next/image';
+import clsx from 'clsx';
+import { Poiret_One } from "next/font/google";
+
+const permanentMarker = Poiret_One({
+    subsets: ['latin'], // Personnalisez selon vos besoins
+    weight: '400',      // Ajoutez d'autres styles si nécessaire
+  });
 
 export const OtherSkills = () => {
     return (
         /* <BlurFade delay={0.25} inView> */
             <Section className="flex flex-col">
-            <p className="text-xl text-muted-foreground">Technical skills</p>
+            <p className={clsx(permanentMarker.className,'text-xl')}>Technical skills</p>
             <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">What I master the most</h2>
             <div className="flex flex-col md:flex-row items-center justify-between p-0 gap-4"></div>
                 <div className="flex-1 max-w-full md:max-w-[100%] flex flex-col gap-2 w-full">
                     <div className="flex flex-col gap-1 w-full max-w-4xl m-auto">
                         <div className="p-4 flex flex-col gap-1">
-                            <p className="text-sm  mb-2">Top skills</p> 
+                            <p className="text-sm text-muted-foreground mb-2">Top skills</p> 
                             <div className="flex flex-wrap gap-2">
                             {TOP_SKILLS.map((tool, index) => (
                                     <TopSkills
@@ -26,7 +32,7 @@ export const OtherSkills = () => {
                             </div>
                         </div>
                         <div className="p-4 flex flex-col gap-1">
-                            <p className="text-sm mb-2">Programming Languages</p>
+                            <p className="text-sm text-muted-foreground mb-2">Programming Languages</p>
                             <div className="flex flex-wrap gap-2">
                             {LANGUAGES.map((tool, index) => (
                                         <Languages
@@ -40,7 +46,7 @@ export const OtherSkills = () => {
                             </div>
                         </div>
                         <div className="p-4 flex flex-col gap-1">
-                            <p className="text-sm mb-2">Databases</p>
+                            <p className="text-sm text-muted-foreground mb-2">Databases</p>
                             <div className="flex flex-wrap gap-2">
                             {DATABASES.map((tool, index) => (
                                     <Databases
@@ -54,7 +60,7 @@ export const OtherSkills = () => {
                             </div>
                         </div>
                         <div className="p-4 flex flex-col gap-1">
-                            <p className="text-sm mb-2">Management and Productivity Tools</p>
+                            <p className="text-sm text-muted-foreground mb-2">Management and Productivity Tools</p>
                             <div className="flex flex-wrap gap-2">
                             {MANAGMENT_TOOLS.map((tool, index) => (
                                     <ManagmentTools
@@ -68,7 +74,7 @@ export const OtherSkills = () => {
                             </div>
                         </div>
                         <div className="p-4 flex flex-col gap-1">
-                            <p className="text-sm mb-2">Design Tools</p>
+                            <p className="text-sm text-muted-foreground mb-2">Design Tools</p>
                             <div className="flex flex-wrap gap-2">
                             {DESIGN_TOOLS.map((tool, index) => (
                                     <DesingTools
@@ -128,12 +134,12 @@ type ManagmentToolsProps = {
 
 const ManagmentTools = (props: ManagmentToolsProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-2 rounded-md">
             
-            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-6 h-6 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
+                <h4 className="scroll-m-20 text-xs text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -159,12 +165,12 @@ type DesignToolsProps = {
 
 const DesingTools = (props: DesignToolsProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-2">
             
-            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-6 h-6 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
+                <h4 className="scroll-m-20 text-xs text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -214,12 +220,12 @@ type TopSkillsProps = {
 
 const TopSkills = (props: TopSkillsProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-2">
             
-            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-6 h-6 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
+                <h4 className="scroll-m-20 text-xs text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -269,12 +275,12 @@ type DatabasesProps = {
 
 const Databases = (props: DatabasesProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-2">
             
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-6 h-6 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
+                <h4 className="scroll-m-20 text-xs text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )
@@ -311,12 +317,12 @@ type LanguagesProps = {
 
 const Languages = (props: LanguagesProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-2 rounded-md cursor-pointer">
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-2">
             
-            <Image src={props.image} alt={props.title} className="w-8 h-8 object-contain rounded-md" width={100} height={100}/>
+            <Image src={props.image} alt={props.title} className="w-6 h-6 object-contain rounded-md" width={100} height={100}/>
             
             <div>
-                <h4 className="scroll-m-20 text-sm text-muted-foreground">{props.title}</h4>
+                <h4 className="scroll-m-20 text-xs text-muted-foreground">{props.title}</h4>
             </div>
         </div>
     )

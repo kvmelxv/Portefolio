@@ -1,5 +1,12 @@
 import { Section } from "./Section";
+import clsx from 'clsx';
+import { Poiret_One } from "next/font/google";
 
+const permanentMarker = Poiret_One({
+    subsets: ['latin'], // Personnalisez selon vos besoins
+    weight: '400',      // Ajoutez d'autres styles si nécessaire
+  });
+  
 // Liste des chemins relatifs aux vidéos dans le dossier `public`
 const videos = [
   {
@@ -39,7 +46,7 @@ const videos = [
 export function BlurFadeDemo() {
   return (
     <Section>
-      <p className="text-xl text-muted-foreground">Works</p>
+      <p className={clsx(permanentMarker.className,'text-xl')}>My Works</p>
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">
         Showcase of My Recent Projects
       </h2>

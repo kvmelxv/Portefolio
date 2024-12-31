@@ -6,12 +6,14 @@ import Image from 'next/image';
 export const Hero = () => {
     return (
         /* <BlurFade delay={0.25} inView> */
-            <Section className="flex max-lg:flex-col items-center gap-8">
-                <div className="flex-[4]">
-                    <h2 className="font-caption text-5xl mb-3 font-bold" >Hi, I&apos;m Mustapha Kamel Cherif 👋</h2>
-                    <h3 className="text-3xl mb-3">Full Stack Developer</h3>
-                    <p className="mb-2 text-sm mb-3">I am a seasoned full stack developer with a passion for crafting robust and scalable web applications. With a solid foundation in both front-end and back-end technologies, I thrive in architecting solutions that marry user-centric design with efficient functionality. </p>
-                    <p className="text-sm">Based in Montreal, Canada. 🇨🇦</p>
+            <Section className="flex max-lg:flex-col items-center gap-10">
+                <div className="flex-[3]">
+                    <h2 className="font-caption text-6xl mb-3 font-bold" >Hi,</h2>
+                    <h2 className="font-caption text-7xl mb-3 font-bold" >I&apos;m Mustapha</h2>
+                    <h2 className="font-caption text-5xl mb-3 font-bold" >Kamel Cherif 👋</h2>
+                    <h3 className="text-2xl mb-3">Full Stack Developer</h3>
+                    <p className="mb-2 text-md mb-3">I'm a full-stack developer passionate about crafting scalable web applications that blend user-centric design with efficient functionality.</p>
+                    <p className="text-md">Based in Montreal, Canada 🇨🇦</p>
                 </div>
                 <div  className="flex-1">
                     <Image 

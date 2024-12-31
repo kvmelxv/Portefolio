@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
 
-      <DockDemo></DockDemo>
+      {/* <DockDemo></DockDemo> */}
       
       <Header></Header>
 

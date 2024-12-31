@@ -1,15 +1,23 @@
 import { Section } from "./Section";
 import Image from 'next/image';
+import clsx from 'clsx';
+import { Poiret_One } from "next/font/google";
+
+const permanentMarker = Poiret_One({
+    subsets: ['latin'], // Personnalisez selon vos besoins
+    weight: '400',      // Ajoutez d'autres styles si nécessaire
+  });
+  
 
 export const Status = () => {
     return (
             <Section className="flex flex-col">
-                <p className="text-xl text-muted-foreground">About me</p>
-                <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">Experiences and Education</h2>
+                <p className={clsx(permanentMarker.className,'text-xl')}>About me</p>
+                <h2 className='scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10'>Experiences and Education</h2>
                 <div className="flex max-md:flex-col itemsflex-start pt-0 gap-4 h-full">
                    <div className="flex flex flex-col gap-4 w-full max-w-4xl m-auto">
                         <div className="p-4 flex-1">
-                            <p className="text-sm text-muted-foreground mb-2">Education</p>
+                            <p className="text-xs text-muted-foreground mb-4">Education</p>
                             <div className="flex flex-col gap-4">
                                 {EDUCATION.map((school, index) => ( 
                                     <Education
@@ -26,7 +34,7 @@ export const Status = () => {
                             </div>
                         </div>
                         <div className="p-4 flex-1">
-                            <p className="text-sm text-muted-foreground mb-2">Experiences</p>
+                            <p className="text-xs text-muted-foreground mb-4">Experiences</p>
                             <div className="flex flex-col gap-4">
                                 {EXPERIENCES.map((work, index) => ( 
                                     <Experience
@@ -68,8 +76,8 @@ type ExperienceProps = {
 
 const Experience = (props: ExperienceProps) =>{
     return (
-        <div /* href={props.url} */ className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded cursor-pointer">
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+        <div /* href={props.url} */ className="inline-flex items-center gap-4 p-1 rounded">
+            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
             <div>
                 <p className="text-sm font-semibold">{props.title}</p>
                 <p className="text-xs text-muted-foreground">{props.role}</p>
@@ -113,8 +121,8 @@ type EducationProps = {
 
 const Education = (props: EducationProps) =>{
     return (
-        <div className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-0 mt-4 rounded cursor-pointer">
-            <Image src={props.image} alt={props.title} className="w-9 h-9 object-contain rounded-md" width={100} height={100}/>
+        <div className="inline-flex items-center gap-4 p-1 rounded">
+            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
             <div>
                 <p className="text-sm font-semibold">{props.title}</p>
                 <p className="text-xs text-muted-foreground">{props.curriculum}</p>
