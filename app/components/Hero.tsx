@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const Hero = () => {
     return (
         /* <BlurFade delay={0.25} inView> */
-            <Section className="flex max-lg:flex-col items-center gap-10">
+            <Section className="flex max-lg:flex-col items-start gap-10">
                 <div className="flex-[3]">
                     <h2 className="font-caption text-6xl mb-3 font-bold" >Hi,</h2>
                     <h2 className="font-caption text-7xl mb-3 font-bold" >I&apos;m Mustapha</h2>
