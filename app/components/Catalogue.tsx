@@ -81,7 +81,7 @@ export function BlurFadeDemo() {
                   {video.tags.map((tag, tagIdx) => (
                     <div
                       key={tagIdx}
-                      className="inline-flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-1 py-0 text-[10px]"
+                      className="inline-flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-slate-200 text-secondary-foreground hover:bg-secondary/80 px-1 py-0 text-[10px]"
                     >
                       {tag}
                     </div>
@@ -91,7 +91,7 @@ export function BlurFadeDemo() {
               <div className="flex items-center pt-2 px-2 pb-2">
                 <div className="flex flex-row flex-wrap items-start gap-1">
                   <a target="_blank" href={video.website}>
-                    <div className="items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80 flex gap-2 px-2 py-1 text-[10px]">
+                    <div className="items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-slate-500 text-slate-100 shadow hover:bg-primary/80 flex gap-2 px-2 py-1 text-[10px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
