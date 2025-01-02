@@ -1,13 +1,13 @@
 import { Section } from "./Section";
-import { Button } from "@/components/ui/button";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedInIcon } from "./icons/LInkedInIcon";
 import { InstagramIcon } from "./icons/InstagramIcon";
+import ScrollProgress from "@/components/ui/scroll-progress";
 import Link from 'next/link'
 
 export const Header = () => {
     return (
-        <header className="border-b border-secondary p-4">
+        <header className="border-b border-secondary p-4 fixed top-0 left-0 w-full z-10 bg-white shadow-sm">
             <Section className="flex justify-between">
                 <h1 className="text-2xl text-primary font-bold">kamelchx</h1>
                 <div className="flex items-center">
@@ -26,6 +26,9 @@ export const Header = () => {
                     </ul>
                 </div>
             </Section>
+
+            {/* Scroll Progress below the header */}
+            <ScrollProgress className="fixed top-[64px] left-0 w-full z-20 bg-white shadow-sm" />
         </header>
     )
 }; 
