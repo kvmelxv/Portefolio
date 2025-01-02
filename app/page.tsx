@@ -8,17 +8,16 @@ import { Footer } from "./components/Footer";
 import { BlurFadeDemo } from "./components/Catalogue";
 import { DockDemo } from "./components/Doke";
 import { ScrollBasedVelocityDemo } from "./components/ScrollText";
-import { AfterHero } from "./components/AfterHero";
+import { AfterHero } from "./components/AfterHero";import ScrollProgress from "@/components/ui/scroll-progress";
+
 
 export default function Home() {
   return (
     <main>
-
-      {/* <DockDemo></DockDemo> */}
       
       <Header></Header>
 
-      <Spacing size="md"/>
+      <Spacing size="lg"/>
       
       <Hero></Hero>
 
