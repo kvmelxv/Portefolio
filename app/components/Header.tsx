@@ -1,7 +1,6 @@
 import { Section } from "./Section";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import ScrollProgress from "@/components/ui/scroll-progress";
-import ThemeSwitch from "./ThemeSwitch";
 import Link from 'next/link'
 
 export const Header = () => {
@@ -12,15 +11,15 @@ export const Header = () => {
                 <div className="flex items-center">
                     <ul className="flex items-center gap-2">
                         <Link href="https://github.com/kvmelxv" className="size-6 p-0">
-                            <FaGithub size={18} className="text-foreground"/>
+                            <FaGithub size={22} className="text-foreground"/>
                         </Link>
 
                         <Link href="https://linkedin.com/in/musmustapha-kamel-chérif" className="size-6 p-0">
-                            <FaLinkedin size={18} className="text-foreground"/>
+                            <FaLinkedin size={22} className="text-foreground"/>
                         </Link>
 
                         <Link href="https://x.com/kamelxch" className="size-6 p-0">
-                            <FaInstagram size={18} className="text-foreground"/>
+                            <FaTwitter size={22} className="text-foreground"/>
                         </Link>
                     </ul>
                 </div>
