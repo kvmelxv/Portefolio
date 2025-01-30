@@ -2,6 +2,7 @@ import { Section } from "./Section";
 import Image from 'next/image';
 import clsx from 'clsx';
 import { Poiret_One } from "next/font/google";
+import { Spacing } from "./Spacing";
 
 const permanentMarker = Poiret_One({
     subsets: ['latin'], // Personnalisez selon vos besoins
@@ -90,34 +91,34 @@ const Experience = (props: ExperienceProps) => {
             <div>
                 <p className="text-sm font-semibold">{props.title}</p>
                 <p className="text-[13px] text-muted-foreground mb-3">{props.role}</p>
-                <div className="mt-2 flex flex-wrap gap-1 mb-6">
+                {/* <div className="mt-2 flex flex-wrap gap-1 mb-6">
                     {props.tags.map((tag, tagIdx) => (
                         <div
                             key={tagIdx}
-                            className="inline-flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-slate-200 text-secondary-foreground px-2 py-1 text-xs"
+                            className="inline-flex items-center rounded-md border font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-lime-50 text-secondary-foreground px-2 py-1 text-xs text-lime-700"
                         >
                             {tag}
                         </div>
                     ))}
-                </div>
-                <div className="flex-col">
-                    <div className="flex items-center gap-2 mb-2">
+                </div> */}
+                {/* <div className="flex-col">
+                    <div className="flex items-center gap-2 mb-1">
                         <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
                         </svg>
                         <p className="text-sm text-muted-foreground">Design and development of user-friendly interfaces using HTML, CSS, and JavaScript.</p>
                     </div>
-                    <div className="flex items-start gap-2 mb-2">
+                    <div className="flex items-start gap-2 mb-1">
                         <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
                         </svg>
-                        <p className="text-sm text-muted-foreground mb-2">Integrated front-end features with back-end systems using Symfony and React.</p>
+                        <p className="text-sm text-muted-foreground mb-1">Integrated front-end features with back-end systems using Symfony and React.</p>
                     </div>
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center gap-2 mb-1">
                         <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
                         </svg>
-                        <p className="text-sm text-muted-foreground mb-2">Optimization of website performance for a seamless user experience.</p>
+                        <p className="text-sm text-muted-foreground mb-1">Optimization of website performance for a seamless user experience.</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +126,7 @@ const Experience = (props: ExperienceProps) => {
                         </svg>
                         <p className="text-sm text-muted-foreground">Integration and adaptation of graphic designs provided by the design team.</p>
                     </div>
-                </div>
+                </div> */}
             </div>
            
             <div className="ml-auto">

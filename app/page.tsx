@@ -6,10 +6,6 @@ import { Contact } from "./components/Contact";
 import { OtherSkills } from "./components/OtherSkills";
 import { Footer } from "./components/Footer";
 import { BlurFadeDemo } from "./components/Catalogue";
-import { DockDemo } from "./components/Doke";
-import { ScrollBasedVelocityDemo } from "./components/ScrollText";
-import { AfterHero } from "./components/AfterHero";import ScrollProgress from "@/components/ui/scroll-progress";
-
 
 export default function Home() {
   return (

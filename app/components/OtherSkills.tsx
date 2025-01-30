@@ -191,12 +191,6 @@ const TOP_SKILLS: TopSkillsProps[] = [
         description: "PHP framework for crafting elegant and scalable web applications.",
         url:"/"
     },
-   /*  {
-        image: "https://cdn.svgporn.com/logos/typescript-icon.svg",
-        title: "Typescript",
-        description: "JavaScript superset that enhances development with static types and better tooling.",
-        url:"/"
-    }, */
     {
         image: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
         title: "Next.js",
@@ -288,6 +282,12 @@ const Databases = (props: DatabasesProps) =>{
 
 //Languages //
 const LANGUAGES: LanguagesProps[] = [
+    {
+        image: "https://cdn.svgporn.com/logos/java.svg",
+        title: "Java",
+        description: "JavaScript adds interactivity to web pages.",
+        url:"/"
+    },
     {
         image: "https://cdn.svgporn.com/logos/javascript.svg",
         title: "JavaScript",
