@@ -1,6 +1,5 @@
 import { Section } from "./Section";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ThemeSwitch from "./ThemeSwitch";
 import Link from 'next/link'
@@ -21,7 +20,7 @@ export const Header = () => {
                         </Link>
 
                         <Link href="https://x.com/kamelxch" className="size-6 p-0">
-                            <FaXTwitter size={18} className="text-foreground"/>
+                            <FaInstagram size={18} className="text-foreground"/>
                         </Link>
                     </ul>
                 </div>
