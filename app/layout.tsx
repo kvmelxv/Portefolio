@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
@@ -25,6 +27,8 @@ export default function RootLayout({
       <body className={cn(GeistSans.variable, AnekTelugu.variable, "font-sans h-full bg-background text-foreground")}>
         <Providers>
           {children}
+          <Analytics />
+          <SpeedInsights />
         </Providers>
       </body> 
     </html>
