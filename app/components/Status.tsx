@@ -80,55 +80,18 @@ type ExperienceProps = {
 
 const Experience = (props: ExperienceProps) => {
     return (
-        <div className="inline-flex items-start gap-4 p-1 rounded">
+        <div className="inline-flex items-start gap-2 md:gap-4 p-1 rounded flex-wrap md:flex-nowrap">
             <Image
                 src={props.image}
                 alt={props.title}
-                className="w-10 h-10 object-contain rounded-md"
+                className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-md"
                 width={100}
                 height={100}
             />
-            <div>
-                <p className="text-sm font-semibold">{props.title}</p>
-                <p className="text-[13px] text-muted-foreground mb-3">{props.role}</p>
-                {/* <div className="mt-2 flex flex-wrap gap-1 mb-6">
-                    {props.tags.map((tag, tagIdx) => (
-                        <div
-                            key={tagIdx}
-                            className="inline-flex items-center rounded-md border font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-lime-50 text-secondary-foreground px-2 py-1 text-xs text-lime-700"
-                        >
-                            {tag}
-                        </div>
-                    ))}
-                </div> */}
-                {/* <div className="flex-col">
-                    <div className="flex items-center gap-2 mb-1">
-                        <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
-                        </svg>
-                        <p className="text-sm text-muted-foreground">Design and development of user-friendly interfaces using HTML, CSS, and JavaScript.</p>
-                    </div>
-                    <div className="flex items-start gap-2 mb-1">
-                        <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
-                        </svg>
-                        <p className="text-sm text-muted-foreground mb-1">Integrated front-end features with back-end systems using Symfony and React.</p>
-                    </div>
-                    <div className="flex items-center gap-2 mb-1">
-                        <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
-                        </svg>
-                        <p className="text-sm text-muted-foreground mb-1">Optimization of website performance for a seamless user experience.</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z" fill="#000000"/>
-                        </svg>
-                        <p className="text-sm text-muted-foreground">Integration and adaptation of graphic designs provided by the design team.</p>
-                    </div>
-                </div> */}
+            <div className="flex-1 min-w-[150px]">
+                <p className="text-xs md:text-sm font-semibold">{props.title}</p>
+                <p className="text-[12px] md:text-[13px] text-muted-foreground mb-2 md:mb-3">{props.role}</p>
             </div>
-           
             <div className="ml-auto">
                 <p className="text-xs text-muted-foreground">{props.date}</p>
             </div>
@@ -169,11 +132,17 @@ type EducationProps = {
 
 const Education = (props: EducationProps) =>{
     return (
-        <div className="inline-flex items-center gap-4 p-1 rounded">
-            <Image src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-md" width={100} height={100}/>
-            <div>
-                <p className="text-sm font-semibold">{props.title}</p>
-                <p className="text-[13px] text-muted-foreground">{props.curriculum}</p>
+        <div className="inline-flex items-center gap-2 md:gap-4 p-1 rounded flex-wrap md:flex-nowrap">
+            <Image 
+                src={props.image} 
+                alt={props.title} 
+                className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-md" 
+                width={100} 
+                height={100}
+            />
+            <div className="flex-1 min-w-[150px]">
+                <p className="text-xs md:text-sm font-semibold">{props.title}</p>
+                <p className="text-[12px] md:text-[13px] text-muted-foreground">{props.curriculum}</p>
             </div>
             <div className="ml-auto">
                 <p className="text-xs text-muted-foreground">{props.date}</p>
