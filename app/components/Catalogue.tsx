@@ -3,12 +3,28 @@ import clsx from 'clsx';
 import { Poiret_One } from "next/font/google";
 
 const permanentMarker = Poiret_One({
-    subsets: ['latin'], // Personnalisez selon vos besoins
-    weight: '400',      // Ajoutez d'autres styles si nécessaire
+    subsets: ['latin'], 
+    weight: '400',     
   });
   
 // Liste des chemins relatifs aux vidéos dans le dossier `public`
 const videos = [
+  {
+    url: "bot.webm",
+    title: "Price Tracker Bot",
+    date: "Feb 2025 - Mar 2024",
+    description: "Price Tracker Bot is a bot that monitors the prices of an online product and sends an alert on Discord when the price drops.",
+    tags: ["Javascript"],
+    website: "https://github.com/kvmelxv/TrackerPricesBot",
+  },
+  {
+    url: "location.webm",
+    title: "Green Vehicle Rental Management Program.",
+    date: "Mar 2025 - Mar 2025",
+    description: "This system displays available vehicle inventory, processes rentals, and manages taxes, insurance, and discounts. It also provides statistics on rented vehicles.",
+    tags: ["Java", "BlueJ"],
+    website: "https://github.com/kvmelxv/LocationDeVehiculesVerts-v1.0",
+  },
   {
     url: "autooccasion.webm",
     title: "AutoOccasion",
@@ -32,15 +48,7 @@ const videos = [
     description: "FilmFinder is a web application where users can rate, comment on, and discover movies, while connecting with a community of fellow movie enthusiasts.",
     tags: ["React", "Firebase", "Javascript", "Express", "API REST", "NodeJs"],
     website: "https://filmsfinderapp.netlify.app/",
-  },
-  {
-    url: "/juice.mp4",
-    title: "Juice App",
-    date: "Mar 2023 - Apr 2023",
-    description: "A video ad for beverages that rotates between showcasing three different drinks can highlight each product in a visually appealing and dynamic way.",
-    tags: ["Figma"],
-    website: "#",
-  },
+  }
 ];
 
 export function BlurFadeDemo() {
@@ -50,13 +58,13 @@ export function BlurFadeDemo() {
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-10">
         Showcase of My Recent Projects
       </h2>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 gap-7 sm:grid-cols-1 max-w-xl mx-auto">
         {videos.map((video, idx) => (
           <div
             key={idx}
             className="opacity: 1; filter: blur(0px); transform: translateY(-6px) translateZ(0px);"
           >
-            <div className="rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
+            <div className="rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-xl transition-all duration-300 ease-out h-full">
               <a className="block cursor-pointer" href={video.website} target="_blank" rel="noopener noreferrer">
                 <video
                   src={video.url}
