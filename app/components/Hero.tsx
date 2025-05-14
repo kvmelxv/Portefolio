@@ -1,7 +1,5 @@
 import { Section } from "./Section"
 import Image from 'next/image';
-import { Spacing } from "./Spacing";
-
 
 export const Hero = () => {
     return (
